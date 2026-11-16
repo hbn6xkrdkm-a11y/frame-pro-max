@@ -9,7 +9,7 @@ Usage:
   scripts/install-tv.sh install PROFILE SDB_SERIAL
 
 Set TIZEN_STUDIO if the SDK is outside ~/tizen-studio. Use the serial from
-sdb devices. Build creates dist/FancyTVScreensaver.wgt and does not contact a TV.
+sdb devices. Build creates dist/FrameProMax.wgt and does not contact a TV.
 Install builds, permits installation, installs on that serial, and launches.
 HELP
 }
@@ -41,7 +41,7 @@ if [[ $mode == install ]]; then
   fi
 fi
 
-stage="$(mktemp -d "${TMPDIR:-/tmp}/fancy-tv.XXXXXXXX")"
+stage="$(mktemp -d "${TMPDIR:-/tmp}/frame-pro-max.XXXXXXXX")"
 trap 'rm -rf -- "$stage"' EXIT
 python3 "$root/scripts/bundle.py" --stage "$stage/app"
 "$tizen" build-web -- "$stage/app"
@@ -58,11 +58,11 @@ for signature in author-signature.xml signature1.xml; do
   unzip -p "${widgets[0]}" "$signature" >/dev/null
 done
 mkdir -p "$root/dist"
-cp "${widgets[0]}" "$root/dist/FancyTVScreensaver.wgt"
-printf 'Signed widget: %s\n' "$root/dist/FancyTVScreensaver.wgt"
+cp "${widgets[0]}" "$root/dist/FrameProMax.wgt"
+printf 'Signed widget: %s\n' "$root/dist/FrameProMax.wgt"
 
 if [[ $mode == install ]]; then
   "$tizen" install-permit -s "$serial"
-  "$tizen" install -s "$serial" -n FancyTVScreensaver.wgt -- "$root/dist"
+  "$tizen" install -s "$serial" -n FrameProMax.wgt -- "$root/dist"
   "$tizen" run -s "$serial" -p ArtSaver01.Gallery
 fi

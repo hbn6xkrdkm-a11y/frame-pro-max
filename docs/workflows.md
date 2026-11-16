@@ -39,7 +39,7 @@ Use [the physical TV checklist](install.md#4-verify-it-on-your-tv) when changing
 
    ```sh
    version="$(python3 scripts/bundle.py --version)"
-   bundle="FancyTVScreensaver-$version-unsigned.zip"
+   bundle="FrameProMax-$version-unsigned.zip"
    python3 scripts/bundle.py --output "dist/$bundle"
    (cd dist && shasum -a 256 "$bundle" > SHA256SUMS.txt)
    ```

@@ -1,8 +1,8 @@
-# Fancy TV Screensaver
+# Frame Pro Max
 
 Turn your Samsung TV into a quiet art gallery. A gilded frame surrounds each work, paintings dissolve into one another, and the clock and artwork details fade after a few seconds. Fifteen public-domain works are bundled, so the gallery runs offline after installation.
 
-**[Try the live browser demo](https://hbn6xkrdkm-a11y.github.io/fancy-tv-screensaver/)** · **[Install on a Samsung TV](docs/install.md)** · **[Download a release](../../releases/latest)**
+**[Try the live browser demo](https://hbn6xkrdkm-a11y.github.io/frame-pro-max/)** · **[Install on a Samsung TV](docs/install.md)** · **[Download a release](https://github.com/hbn6xkrdkm-a11y/frame-pro-max/releases/latest)**
 
 ![The Great Wave off Kanagawa in a gold frame with the gallery clock and artwork credits](docs/gallery-preview.jpg)
 
@@ -22,9 +22,9 @@ In a browser, use the arrow keys, Enter, Escape, or the on-screen controls. Sele
 With Tizen Studio, a Samsung TV certificate profile that includes your TV, and the TV listed as connected in `sdb devices`:
 
 ```sh
-git clone https://github.com/hbn6xkrdkm-a11y/fancy-tv-screensaver.git
-cd fancy-tv-screensaver
-git switch --detach v1.0.0
+git clone https://github.com/hbn6xkrdkm-a11y/frame-pro-max.git
+cd frame-pro-max
+git switch --detach v1.0.1
 scripts/install-tv.sh install 'YOUR_SAMSUNG_PROFILE' 'TV_IP:26101'
 ```
 

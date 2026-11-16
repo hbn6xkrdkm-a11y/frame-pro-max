@@ -1,4 +1,4 @@
-# Working on Fancy TV Screensaver
+# Working on Frame Pro Max
 
 This repo is a standalone Samsung Tizen fine-art gallery. Start at [README](README.md), then use the [development workflow](docs/workflows.md) and [TV install guide](docs/install.md). No private launcher repo or local machine configuration is needed.
 

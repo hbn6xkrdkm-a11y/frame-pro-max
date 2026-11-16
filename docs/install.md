@@ -32,18 +32,18 @@ Keep the certificate files, passwords, profile metadata, signed widgets, and DUI
 Clone the project, then choose the release you want. To choose a specific later release, substitute its tag.
 
 ```sh
-git clone https://github.com/hbn6xkrdkm-a11y/fancy-tv-screensaver.git
-cd fancy-tv-screensaver
-git switch --detach v1.0.0
+git clone https://github.com/hbn6xkrdkm-a11y/frame-pro-max.git
+cd frame-pro-max
+git switch --detach v1.0.1
 profile='YOUR_SAMSUNG_PROFILE'
 scripts/install-tv.sh install "$profile" "$serial"
 ```
 
-The script validates the source, builds in a temporary folder, saves the signed widget to `dist/FancyTVScreensaver.wgt`, permits installation on your selected TV, installs it, and launches it. Use `scripts/install-tv.sh build "$profile"` to build and sign without contacting the TV.
+The script validates the source, builds in a temporary folder, saves the signed widget to `dist/FrameProMax.wgt`, permits installation on your selected TV, installs it, and launches it. Use `scripts/install-tv.sh build "$profile"` to build and sign without contacting the TV.
 
 ### Manual workflow on Windows or with the release ZIP
 
-The [release's unsigned ZIP](../../../releases/latest) contains the contents of `app/`. Extract the ZIP into a folder named `app` (with `app/config.xml` directly inside). A Git checkout already has this folder. In a PowerShell session opened **one level above** `app`:
+The [release's unsigned ZIP](https://github.com/hbn6xkrdkm-a11y/frame-pro-max/releases/latest) contains the contents of `app/`. Extract the ZIP into a folder named `app` (with `app/config.xml` directly inside). A Git checkout already has this folder. In a PowerShell session opened **one level above** `app`:
 
 ```powershell
 $sdk = 'C:\tizen-studio'
@@ -55,9 +55,9 @@ $profile = 'YOUR_SAMSUNG_PROFILE'
 & $sdb devices
 & $tizen build-web -- app
 & $tizen package -t wgt -s $profile -- app/.buildResult
-Copy-Item 'app/.buildResult/Fancy TV Screensaver.wgt' 'app/.buildResult/FancyTVScreensaver.wgt'
+Copy-Item 'app/.buildResult/Frame Pro Max.wgt' 'app/.buildResult/FrameProMax.wgt'
 & $tizen install-permit -s $serial
-& $tizen install -s $serial -n FancyTVScreensaver.wgt -- app/.buildResult
+& $tizen install -s $serial -n FrameProMax.wgt -- app/.buildResult
 & $tizen run -s $serial -p ArtSaver01.Gallery
 ```
 

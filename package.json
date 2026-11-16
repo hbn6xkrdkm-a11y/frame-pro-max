@@ -1,6 +1,6 @@
 {
-  "name": "fancy-tv-screensaver",
-  "version": "1.0.0",
+  "name": "frame-pro-max",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "check": "node --check app/gallery.js && bash -n scripts/install-tv.sh && python3 scripts/bundle.py --check",

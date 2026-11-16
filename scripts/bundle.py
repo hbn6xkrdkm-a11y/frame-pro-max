@@ -24,9 +24,10 @@ def check():
     assert widget.find(tizen + 'profile').get('name') == 'tv-samsung'
     version = widget.get('version')
     assert re.fullmatch(r'\d+\.\d+\.\d+', version or ''), 'Expected MAJOR.MINOR.PATCH'
-    fixed = [Path(file) for file in ('index.html', 'gallery.css', 'gallery.js', 'config.xml', 'assets/icon.png')]
+    fixed = [Path(file) for file in ('index.html', 'gallery.css', 'gallery.js', 'config.xml', 'assets/icon.png', 'LICENSE.txt')]
     files = fixed + [CATALOG]
     assert all((APP / path).is_file() for path in files), 'Missing widget source file'
+    assert (APP / 'LICENSE.txt').read_bytes() == (ROOT / 'LICENSE').read_bytes(), 'Sync the packaged code license'
     paintings = json.loads((APP / CATALOG).read_text(encoding='utf-8'))
     assert isinstance(paintings, list) and paintings, 'Art catalog is empty'
     for art in paintings:

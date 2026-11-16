@@ -4,13 +4,13 @@ The public gallery has its own signed widget identity:
 
 | Field | Value |
 | --- | --- |
-| Display name | Fancy TV Screensaver |
+| Display name | Frame Pro Max |
 | Application ID for launch | `ArtSaver01.Gallery` |
 | Package ID for uninstall | `ArtSaver01` |
 
 ## Add a shortcut
 
-After installing the gallery on the same TV, refresh your launcher's installed app list. Look for **Fancy TV Screensaver** and pin it. If your launcher accepts explicit app IDs, use `ArtSaver01.Gallery`. Verify with the physical remote: open the shortcut, advance an artwork, and Back out.
+After installing the gallery on the same TV, refresh your launcher's installed app list. Look for **Frame Pro Max** and pin it. If your launcher accepts explicit app IDs, use `ArtSaver01.Gallery`. Verify with the physical remote: open the shortcut, advance an artwork, and Back out.
 
 If the launcher is a Tizen web app you maintain, it can attempt launch through [Tizen's Application API](https://developer.samsung.com/smarttv/develop/api-references/tizen-web-device-api-references/application-api.html). The launch privilege belongs in the **launcher** manifest, not in the gallery:
 
