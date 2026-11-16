@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fine art for your Samsung TV. An offline gallery with a gilded frame, soft transitions, and artwork credits.">
+  <title>Fancy TV Screensaver</title>
+  <link rel="icon" href="assets/icon.png">
+  <link rel="stylesheet" href="gallery.css">
+  <script src="gallery.js" defer></script>
+</head>
+<body>
+  <main id="gallery" aria-label="Fine art gallery">
+    <div class="slide" aria-hidden="true"></div>
+    <div class="slide" aria-hidden="true"></div>
+    <div class="scrim" aria-hidden="true"></div>
+    <div class="frame" aria-hidden="true"></div>
+    <time id="clock" aria-hidden="true"></time>
+    <div id="caption" aria-live="off" aria-hidden="true">
+      <p id="title"></p>
+      <p id="artist"></p>
+      <p id="credit"></p>
+    </div>
+    <nav id="controls" aria-label="Gallery controls" hidden>
+      <button id="previous" type="button" aria-label="Previous painting">←</button>
+      <button id="info" type="button" aria-pressed="false">Info</button>
+      <button id="next" type="button" aria-label="Next painting">→</button>
+      <button id="fullscreen" type="button" aria-pressed="false">Fullscreen</button>
+    </nav>
+    <section id="welcome" hidden>
+      <h1>Fancy TV Screensaver</h1>
+      <p id="message">A quiet gallery of fine art.</p>
+      <button id="start" type="button">Start gallery</button>
+      <a id="project" href="https://github.com/hbn6xkrdkm-a11y/fancy-tv-screensaver" hidden>Installation and source</a>
+    </section>
+  </main>
+</body>
+</html>

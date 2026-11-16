@@ -1,0 +1,16 @@
+.DS_Store
+.local/
+.env*
+*.local
+*.p12
+*.pfx
+*.key
+*.pem
+profiles.xml
+*.wgt
+.buildResult/
+dist/
+node_modules/
+test-results/
+playwright-report/
+__pycache__/

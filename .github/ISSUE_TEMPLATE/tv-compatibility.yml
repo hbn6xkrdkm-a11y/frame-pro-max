@@ -1,0 +1,32 @@
+name: TV compatibility report
+description: Share install, launch, remote, or screen protection results from a physical Samsung TV.
+title: "TV report: "
+body:
+  - type: input
+    id: model
+    attributes:
+      label: TV model and firmware
+      placeholder: Model, Tizen version if known, firmware
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Gallery version
+      placeholder: v1.0.0
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Steps and result
+      description: Include whether the app installed, launched, responded to the remote, and stayed visible past the old Samsung screensaver cutoff.
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Public report
+      options:
+        - label: I removed LAN addresses, DUIDs, certificates, and other private details.
+          required: true
